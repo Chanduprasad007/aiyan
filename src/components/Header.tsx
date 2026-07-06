@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Sparkles, Menu, X, Phone, MapPin } from 'lucide-react';
+import { Terminal, Menu, X, Cpu, Github, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface HeaderProps {
@@ -10,36 +10,40 @@ export default function Header({ onNavigate }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Our Craft', id: 'craft' },
-    { label: 'Signature Collections', id: 'portfolio' },
-    { label: 'AI Designer Consultant', id: 'ai-consultant' },
-    { label: 'Craft Estimator', id: 'estimator' },
-    { label: 'Locate Store', id: 'location' }
+    { label: 'Bento Grid', id: 'bento' },
+    { label: 'Pipeline', id: 'pipeline' },
+    { label: 'Monitor', id: 'monitor' },
+    { label: 'Knowledge', id: 'knowledge' },
+    { label: 'Tools', id: 'tools' }
   ];
 
   const handleItemClick = (id: string) => {
-    onNavigate(id);
+    // If it's a section, scroll to it
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
     setIsOpen(false);
   };
 
   return (
-    <header id="app-header" className="sticky top-0 z-50 bg-[#0c0c0b]/80 backdrop-blur-md border-b border-white/5">
+    <header id="app-header" className="sticky top-0 z-50 bg-[#08070a]/80 backdrop-blur-md border-b border-white/5 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-20">
           
-          {/* Logo Brand matching Immersive design exactly */}
-          <div className="flex items-center gap-4 cursor-pointer" onClick={() => handleItemClick('hero')}>
-            <div className="w-14 h-14 border-2 border-[#c9a050] rotate-45 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(201,160,80,0.15)]">
-              <span className="-rotate-45 font-serif text-[#c9a050] text-2xl font-black">A</span>
+          {/* Logo Brand */}
+          <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleItemClick('app-header')}>
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-tr from-violet-600 to-indigo-600 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(139,92,246,0.3)]">
+              <Cpu className="text-white h-5 w-5" />
             </div>
             <div>
-              <span className="font-serif text-3xl sm:text-4xl font-extrabold tracking-[0.1em] text-white block leading-tight">AIYAN</span>
-              <span className="font-mono text-[9px] sm:text-[10px] tracking-[0.25em] text-[#c9a050] block font-bold uppercase">EMBROIDERY & HAND WORKS</span>
+              <span className="font-display text-xl font-bold tracking-tight text-white block leading-tight">AIYAN</span>
+              <span className="font-mono text-[8px] tracking-[0.2em] text-violet-400 block font-bold uppercase">AGENT WORKSPACE</span>
             </div>
           </div>
 
-          {/* Desktop Navigation with high tracking & gold accent */}
-          <nav className="hidden md:flex gap-8 text-xs uppercase tracking-[0.2em] font-medium text-[#c9a050]/80">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex gap-6 text-[11px] uppercase tracking-[0.15em] font-semibold text-neutral-400">
             {menuItems.map((item) => (
               <button
                 key={item.id}
@@ -47,26 +51,31 @@ export default function Header({ onNavigate }: HeaderProps) {
                 className="hover:text-white transition-colors duration-200 relative py-1 group cursor-pointer"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#c9a050] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-violet-500 transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
           </nav>
 
           {/* Call to Action Button */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-4">
             <a 
-              href="tel:+918024091312" 
-              className="flex items-center text-xs font-mono text-[#c9a050]/90 hover:text-white transition-colors"
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-[11px] font-mono text-neutral-400 hover:text-white transition-colors gap-1.5"
             >
-              <Phone className="h-3 w-3 mr-1.5 text-[#c9a050]" />
-              +91 Call Boutique
+              <Github className="h-4 w-4" />
+              <span>Repository</span>
             </a>
             <button
-              onClick={() => handleItemClick('ai-consultant')}
-              className="bg-[#c9a050] text-[#0c0c0b] px-6 py-3 font-bold uppercase text-xs tracking-widest hover:bg-[#b08b40] transition-all duration-300 shadow-md cursor-pointer flex items-center space-x-1.5"
+              onClick={() => {
+                const el = document.getElementById('bento');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="bg-violet-600 text-white px-5 py-2.5 rounded-lg font-bold uppercase text-[10px] tracking-wider hover:bg-violet-500 transition-all duration-300 shadow-md cursor-pointer flex items-center space-x-1.5 border border-violet-500/20"
             >
-              <Sparkles className="h-3.5 w-3.5 text-[#0c0c0b]" />
-              <span>AI Consultation</span>
+              <Terminal className="h-3.5 w-3.5" />
+              <span>Launch Sandbox</span>
             </button>
           </div>
 
@@ -74,10 +83,10 @@ export default function Header({ onNavigate }: HeaderProps) {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-[#f4f1ea] hover:text-[#c9a050] p-2 focus:outline-none"
+              className="text-neutral-400 hover:text-white p-2 focus:outline-none"
               aria-label="Toggle Menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
           </div>
         </div>
@@ -90,28 +99,38 @@ export default function Header({ onNavigate }: HeaderProps) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#121211] border-b border-white/5"
+            className="md:hidden bg-[#0d0c11] border-b border-white/5"
           >
             <div className="px-4 pt-2 pb-6 space-y-2">
               {menuItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => handleItemClick(item.id)}
-                  className="block w-full text-left px-4 py-3 text-[#f4f1ea]/80 hover:bg-[#c9a050]/10 hover:text-[#c9a050] font-sans text-sm font-semibold tracking-wider uppercase rounded-md transition-all duration-200"
+                  className="block w-full text-left px-4 py-3 text-neutral-300 hover:bg-violet-500/10 hover:text-violet-400 font-sans text-xs font-semibold tracking-wider uppercase rounded-md transition-all duration-200"
                 >
                   {item.label}
                 </button>
               ))}
               <div className="pt-4 border-t border-white/5 px-4 space-y-3">
-                <div className="flex items-center text-xs font-mono text-[#a8a29e]">
-                  <MapPin className="h-4 w-4 mr-2 text-[#c9a050]" />
-                  <span>Sneha Colony, Banashankari, Bangalore</span>
-                </div>
-                <button
-                  onClick={() => handleItemClick('ai-consultant')}
-                  className="w-full bg-[#c9a050] text-[#0c0c0b] font-bold uppercase text-xs tracking-widest py-3 text-center block hover:bg-[#b08b40] transition-all duration-300"
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-xs font-mono text-neutral-400"
                 >
-                  Start AI Consultation
+                  <Github className="h-4 w-4 mr-2" />
+                  <span>GitHub Repository</span>
+                  <ExternalLink className="h-3 w-3 ml-1" />
+                </a>
+                <button
+                  onClick={() => {
+                    setIsOpen(false);
+                    const el = document.getElementById('bento');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="w-full bg-violet-600 text-white font-bold uppercase text-[10px] tracking-widest py-3 text-center rounded-lg block hover:bg-violet-500 transition-all duration-300"
+                >
+                  Launch Sandbox
                 </button>
               </div>
             </div>

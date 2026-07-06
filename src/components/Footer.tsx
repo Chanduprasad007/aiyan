@@ -1,61 +1,63 @@
-import { Scissors, MapPin, Phone } from 'lucide-react';
+import { Terminal, Cpu, CheckCircle } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0c0c0b] border-t border-white/5 text-[#a8a29e] py-12">
+    <footer className="bg-[#08070a] border-t border-white/5 text-neutral-400 py-12 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-8 pb-8 border-b border-white/5">
           
           {/* Logo & Brand Column */}
           <div className="md:col-span-5 space-y-4">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 border border-[#c9a050] rotate-45 flex items-center justify-center shrink-0">
-                <span className="-rotate-45 font-serif text-[#c9a050] text-lg font-bold">A</span>
+            <div className="flex items-center space-x-3">
+              <div className="w-9 h-9 rounded-lg bg-gradient-to-tr from-violet-600 to-indigo-600 flex items-center justify-center shrink-0">
+                <Cpu className="text-white h-4.5 w-4.5" />
               </div>
               <div>
-                <span className="font-serif text-2xl font-bold tracking-[0.1em] text-[#f4f1ea] block uppercase">AIYAN</span>
-                <span className="font-mono text-[9px] tracking-[0.2em] text-[#c9a050] block font-bold uppercase">EMBROIDERY & HAND WORKS</span>
+                <span className="font-display text-lg font-bold tracking-tight text-white block">AIYAN</span>
+                <span className="font-mono text-[8px] tracking-[0.2em] text-violet-400 block font-bold uppercase font-sans">AGENT WORKSPACE</span>
               </div>
             </div>
             
-            <p className="font-sans text-xs leading-relaxed text-[#a8a29e] max-w-sm font-light">
-              Your premier boutique in Banashankari, Bangalore for high-end, handcrafted bridal blouses, designer jackets, and majestic saris. Blending years of artisan legacy with custom modern silhouettes.
+            <p className="text-xs leading-relaxed text-neutral-400 max-w-sm">
+              The premier orchestrator and command center for modular multi-agent networks. Build, test, and optimize stateful LLM pipelines in real-time.
             </p>
           </div>
 
-          {/* Quick Contact Specs */}
+          {/* Docs & Specs */}
           <div className="md:col-span-4 space-y-3">
-            <h4 className="font-serif text-[10px] text-[#c9a050] uppercase tracking-widest font-bold">Contact Studio</h4>
-            <div className="space-y-2 font-sans text-xs text-[#a8a29e]">
-              <div className="flex items-center">
-                <MapPin className="h-4 w-4 mr-2.5 text-[#c9a050] shrink-0" />
-                <span>253, 4th Main Rd, Kakathiya Nagar, Banashankari 3rd Stage, Bengaluru</span>
-              </div>
-              <div className="flex items-center font-mono">
-                <Phone className="h-4 w-4 mr-2.5 text-[#c9a050] shrink-0" />
-                <span>+91 8024091312</span>
-              </div>
-            </div>
+            <h4 className="font-mono text-[9px] text-violet-400 uppercase tracking-widest font-bold">API Specifications</h4>
+            <ul className="space-y-2 text-xs">
+              <li>
+                <a href="#pipeline" className="hover:text-white transition-colors duration-200">/v1/pipeline - Routing</a>
+              </li>
+              <li>
+                <a href="#monitor" className="hover:text-white transition-colors duration-200">/v1/telemetry - Token Metrics</a>
+              </li>
+              <li>
+                <a href="#knowledge" className="hover:text-white transition-colors duration-200">/v1/memory - Vector Retrieval</a>
+              </li>
+            </ul>
           </div>
 
-          {/* Legal and compliance */}
+          {/* Operational Status */}
           <div className="md:col-span-3 space-y-3">
-            <h4 className="font-serif text-[10px] text-[#c9a050] uppercase tracking-widest font-bold">Heritage Craft</h4>
-            <div className="space-y-1.5 font-sans text-xs">
-              <p className="leading-relaxed font-serif uppercase tracking-wider text-white">100% Handcrafted Guarantee</p>
-              <p className="text-[#a8a29e] text-[10px] font-light">All designs are intellectual property of Aiyan Embroidery Bangalore.</p>
+            <h4 className="font-mono text-[9px] text-violet-400 uppercase tracking-widest font-bold">Platform Status</h4>
+            <div className="flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 px-3 py-1.5 rounded-lg w-fit text-xs font-mono">
+              <CheckCircle className="h-4 w-4" />
+              <span>All Systems Operational</span>
             </div>
+            <p className="text-[10px] text-neutral-500">API latency: 45ms. Sandbox: Ready.</p>
           </div>
 
         </div>
 
         {/* Bottom section copyright and attribution */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-sans text-[#a8a29e] font-light">
-          <p>© 2026 Aiyan Embroidery And Hand Works. All Rights Reserved.</p>
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-neutral-500">
+          <p>© 2026 Aiyan Agent Workspace. All Rights Reserved.</p>
           <div className="flex items-center space-x-2">
-            <span>Handcrafted in Bangalore, Karnataka</span>
-            <span className="text-[#c9a050]">✦</span>
+            <span>Orchestrated with precision</span>
+            <span className="text-violet-500">✦</span>
           </div>
         </div>
 
