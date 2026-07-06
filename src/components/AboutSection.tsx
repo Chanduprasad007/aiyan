@@ -1,5 +1,6 @@
 import { Scissors, ShieldCheck, Heart, Sparkles, Star } from 'lucide-react';
 import { motion } from 'motion/react';
+import imageHandcraft from '../assets/images/handcrafting_artisan_embroidery_1783349716437.jpg';
 
 export default function AboutSection() {
   const values = [
@@ -58,7 +59,7 @@ export default function AboutSection() {
             <div className="absolute -inset-1 border border-[#c9a050]/20 rounded-lg" />
             <div className="relative bg-[#1a1a18] border border-white/5 p-2 rounded shadow-xl overflow-hidden aspect-[4/3]">
               <img 
-                src="/src/assets/images/handcrafting_artisan_embroidery_1783349716437.jpg" 
+                src={imageHandcraft} 
                 alt="Artisan doing hand Zardosi work" 
                 className="w-full h-full object-cover filter brightness-95"
                 referrerPolicy="no-referrer"

@@ -1,5 +1,6 @@
 import { ArrowRight, Sparkles, Star, ShieldCheck, Clock } from 'lucide-react';
 import { motion } from 'motion/react';
+import imageHero from '../assets/images/hero_bridal_saree_embroidery_1783349684763.jpg';
 
 interface HeroProps {
   onNavigate: (section: string) => void;
@@ -126,7 +127,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             
             <div className="relative bg-[#1a1a18] border border-white/5 p-2 rounded shadow-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-[480px]">
               <img 
-                src="/src/assets/images/hero_bridal_saree_embroidery_1783349684763.jpg" 
+                src={imageHero} 
                 alt="Intricate Royal Silk Saree Embroidery" 
                 className="w-full h-full object-cover filter brightness-95 hover:brightness-100 transition-all duration-700"
                 referrerPolicy="no-referrer"
@@ -143,7 +144,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             {/* Small floating specs */}
             <div className="absolute -top-4 -right-4 bg-[#1a1a18] border border-white/10 p-3 shadow-lg hidden sm:block rounded">
               <p className="font-mono text-[9px] text-[#c9a050] uppercase tracking-widest">STUDIO LOCATION:</p>
-              <p className="font-serif text-xs font-semibold text-[#f4f1ea] mt-1">Sneha Colony, Bangalore</p>
+              <p className="font-serif text-xs font-semibold text-[#f4f1ea] mt-1">Banashankari, Bangalore</p>
             </div>
           </motion.div>
 
