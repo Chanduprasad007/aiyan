@@ -9,18 +9,18 @@ export default function Footer() {
           
           {/* Logo & Brand Column */}
           <div className="md:col-span-5 space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="bg-[#c9a050] p-2 rounded">
-                <Scissors className="h-4.5 w-4.5 text-[#0c0c0b]" />
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 border border-[#c9a050] rotate-45 flex items-center justify-center shrink-0">
+                <span className="-rotate-45 font-serif text-[#c9a050] text-lg font-bold">A</span>
               </div>
               <div>
-                <span className="font-serif text-lg font-bold tracking-widest text-[#f4f1ea] block uppercase">AIYAN</span>
-                <span className="font-mono text-[8px] tracking-[0.25em] text-[#c9a050] block -mt-1 uppercase">EMBROIDERY & HAND WORKS</span>
+                <span className="font-serif text-2xl font-bold tracking-[0.1em] text-[#f4f1ea] block uppercase">AIYAN</span>
+                <span className="font-mono text-[9px] tracking-[0.2em] text-[#c9a050] block font-bold uppercase">EMBROIDERY & HAND WORKS</span>
               </div>
             </div>
             
             <p className="font-sans text-xs leading-relaxed text-[#a8a29e] max-w-sm font-light">
-              Your premier boutique in Sneha Colony, Bangalore for high-end, handcrafted bridal blouses, designer jackets, and majestic saris. Blending years of artisan legacy with custom modern silhouettes.
+              Your premier boutique in Banashankari, Bangalore for high-end, handcrafted bridal blouses, designer jackets, and majestic saris. Blending years of artisan legacy with custom modern silhouettes.
             </p>
           </div>
 
@@ -30,7 +30,7 @@ export default function Footer() {
             <div className="space-y-2 font-sans text-xs text-[#a8a29e]">
               <div className="flex items-center">
                 <MapPin className="h-4 w-4 mr-2.5 text-[#c9a050] shrink-0" />
-                <span>Sneha Colony, Banashankari 3rd Stage, Bangalore</span>
+                <span>253, 4th Main Rd, Kakathiya Nagar, Banashankari 3rd Stage, Bengaluru</span>
               </div>
               <div className="flex items-center font-mono">
                 <Phone className="h-4 w-4 mr-2.5 text-[#c9a050] shrink-0" />

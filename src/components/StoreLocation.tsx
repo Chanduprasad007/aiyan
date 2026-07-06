@@ -2,7 +2,7 @@ import { MapPin, Phone, Clock, Compass, ExternalLink, Star } from 'lucide-react'
 import { motion } from 'motion/react';
 
 export default function StoreLocation() {
-  const mapUrl = "https://maps.app.goo.gl/1PX2hcaNBJwC8mW39";
+  const mapUrl = "https://www.google.com/maps/search/?api=1&query=253,+4th+Main+Rd,+Kakathiya+Nagar,+Banashankari+3rd+Stage,+Banashankari,+Bengaluru,+Karnataka+560061";
 
   const reviews = [
     {
@@ -44,7 +44,7 @@ export default function StoreLocation() {
               
               {/* Boutique Name */}
               <div className="space-y-1">
-                <span className="font-mono text-[9px] tracking-widest text-[#c9a050] uppercase block">SNEHA COLONY, BANGALORE</span>
+                <span className="font-mono text-[9px] tracking-widest text-[#c9a050] uppercase block">KAKATHIYA NAGAR, BANGALORE</span>
                 <h3 className="font-serif text-xl sm:text-2xl font-bold text-white tracking-wide">
                   Aiyan Embroidery And Hand Works
                 </h3>
@@ -57,9 +57,9 @@ export default function StoreLocation() {
                   <div>
                     <span className="font-serif font-bold text-[#f4f1ea] uppercase tracking-wider block">Boutique Address:</span>
                     <span className="text-[#a8a29e] leading-relaxed block mt-1">
-                      No. 12, Sneha Colony, Hosakerehalli, Banashankari 3rd Stage, Bangalore, Karnataka - 560085
+                      253, 4th Main Rd, Kakathiya Nagar, Banashankari 3rd Stage, Banashankari, Bengaluru, Karnataka 560061
                     </span>
-                    <span className="text-[10px] text-[#c9a050] block mt-1">Landmark: Near Banashankari BDA Complex / Hosakerehalli Lake</span>
+                    <span className="text-[10px] text-[#c9a050] block mt-1">Landmark: Banashankari 3rd Stage, Kakathiya Nagar</span>
                   </div>
                 </div>
 
@@ -125,7 +125,7 @@ export default function StoreLocation() {
                 </div>
 
                 <div className="bg-black/60 border border-white/5 rounded px-4 py-3 font-mono text-[10px] text-[#a8a29e] inline-block uppercase tracking-wider">
-                  GPS: 12.9186798° N, 77.5447826° E
+                  GPS: 12.9248231° N, 77.5355672° E
                 </div>
 
                 <div className="pt-2">

@@ -47,7 +47,7 @@ export default function App() {
           onScrollToLocation={() => handleNavigate('location')} 
         />
 
-        {/* Interactive Price Estimator */}
+        {/* Interactive Craft & Timeline Estimator */}
         <CostEstimator onPreFillConsultant={handleSelectDesign} />
 
         {/* Store Location & Google Maps Navigation */}

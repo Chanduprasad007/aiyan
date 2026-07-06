@@ -20,7 +20,7 @@ export interface DesignProposal {
   suggestedColorPairings: string[];
   careInstructions: string;
   estimateTimeline: string;
-  estimatedBudget: string;
+  estimatedBudget?: string;
 }
 
 export interface PortfolioItem {

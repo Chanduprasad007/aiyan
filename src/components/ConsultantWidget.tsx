@@ -114,8 +114,7 @@ export default function ConsultantWidget({ customPreFill, onScrollToLocation }: 
           'Delicate White Pearl'
         ],
         careInstructions: 'Dry clean only. Store wrapped in soft muslin fabric away from direct sunlight to preserve gold thread luster.',
-        estimateTimeline: selectedCoverage ? selectedCoverage.timeline : '10-12 Days',
-        estimatedBudget: formData.coverage === 'heavy' || formData.coverage === 'royal' ? '₹8,500 - ₹12,000' : '₹3,500 - ₹5,500'
+        estimateTimeline: selectedCoverage ? selectedCoverage.timeline : '10-12 Days'
       };
       setProposal(fallbackProposal);
     } finally {
@@ -407,12 +406,6 @@ export default function ConsultantWidget({ customPreFill, onScrollToLocation }: 
                         <span className="font-mono text-[8px] text-[#c9a050] block uppercase tracking-wider">Est. Handcraft Time</span>
                         <span className="font-sans text-xs font-bold text-white">{proposal.estimateTimeline}</span>
                       </div>
-
-                      {/* Estimated Budget */}
-                      <div className="space-y-0.5">
-                        <span className="font-mono text-[8px] text-[#c9a050] block uppercase tracking-wider">Est. Work Budget</span>
-                        <span className="font-serif text-sm font-black text-[#c9a050]">{proposal.estimatedBudget}</span>
-                      </div>
                     </div>
 
                   </div>
@@ -420,7 +413,7 @@ export default function ConsultantWidget({ customPreFill, onScrollToLocation }: 
                   {/* Interactive Button Quote */}
                   <div className="mt-8 pt-4 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10">
                     <p className="font-sans text-[10px] text-[#a8a29e] leading-relaxed text-center sm:text-left">
-                      Estimates are for handwork details. Final prices may vary slightly based on blouse stitching/lining preferences.
+                      This blueprint certificate represents the proposed traditional and premium embroidery design layout for custom bookings.
                     </p>
                     
                     <button

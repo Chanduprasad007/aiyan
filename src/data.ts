@@ -1,4 +1,7 @@
 import { PortfolioItem } from './types';
+import imageBlouse from './assets/images/designer_blouse_jacket_embroidery_1783349701893.jpg';
+import imageHandcraft from './assets/images/handcrafting_artisan_embroidery_1783349716437.jpg';
+import imageHero from './assets/images/hero_bridal_saree_embroidery_1783349684763.jpg';
 
 // Let's use the exact names of the generated images we generated for outstanding accuracy
 export const portfolioItems: PortfolioItem[] = [
@@ -6,7 +9,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: 'b1',
     title: 'The Royal Peacocks Bridal Blouse',
     category: 'blouses',
-    image: '/src/assets/images/designer_blouse_jacket_embroidery_1783349701893.jpg',
+    image: imageBlouse,
     description: 'A masterpiece on raw red silk with heavy Zardosi and maggam work featuring intricate symmetrical dancing peacock designs.',
     details: [
       'Heavy Zardosi back-neck design',
@@ -19,7 +22,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: 'j1',
     title: 'Gilded Banarasi Silk Jacket',
     category: 'jackets',
-    image: '/src/assets/images/handcrafting_artisan_embroidery_1783349716437.jpg',
+    image: imageHandcraft,
     description: 'An ethereal luxury ethnic jacket with rich Aari needlework and fine gold threads handcrafted over rich Banarasi violet fabric.',
     details: [
       'All-over floral vine hand needlework',
@@ -32,7 +35,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: 's1',
     title: 'Crimson Heritage Sari Border',
     category: 'saris',
-    image: '/src/assets/images/hero_bridal_saree_embroidery_1783349684763.jpg',
+    image: imageHero,
     description: 'A breathtakingly detailed gold-braided boundary crafted for a royal wedding sari, featuring heritage Indian creepers.',
     details: [
       'Pure gold Zari metal threads',
@@ -117,16 +120,16 @@ export const coverageOptions = [
 ];
 
 export const garmentOptions = [
-  { value: 'bridal_blouse', label: 'Bridal Blouse / Jacket', basePrice: 2500 },
-  { value: 'saree_border', label: 'Saree Border & Pallu (Complete 5.5 meters)', basePrice: 6000 },
-  { value: 'lehenga_blouse', label: 'Lehenga Blouse & Skirt Borders', basePrice: 8000 },
-  { value: 'ethnic_jacket', label: 'Full-length Designer Jacket', basePrice: 5000 }
+  { value: 'bridal_blouse', label: 'Bridal Blouse / Jacket' },
+  { value: 'saree_border', label: 'Saree Border & Pallu (Complete 5.5 meters)' },
+  { value: 'lehenga_blouse', label: 'Lehenga Blouse & Skirt Borders' },
+  { value: 'ethnic_jacket', label: 'Full-length Designer Jacket' }
 ];
 
 export const embroideryTypeOptions = [
-  { value: 'zardosi', label: 'Traditional Zardosi (Metallic gold thread)', basePrice: 1500 },
-  { value: 'aari_maggam', label: 'Aari / Maggam Needlework (Beads & pearls)', basePrice: 1200 },
-  { value: 'cutwork', label: 'Cutwork / Scalloping (Intricate borders)', basePrice: 1800 },
-  { value: 'kundan_stone', label: 'Kundan & Gemstone Embellishment', basePrice: 2000 },
-  { value: 'thread_silk', label: 'Multicolor Silk Thread Embroidery', basePrice: 1000 }
+  { value: 'zardosi', label: 'Traditional Zardosi (Metallic gold thread)' },
+  { value: 'aari_maggam', label: 'Aari / Maggam Needlework (Beads & pearls)' },
+  { value: 'cutwork', label: 'Cutwork / Scalloping (Intricate borders)' },
+  { value: 'kundan_stone', label: 'Kundan & Gemstone Embellishment' },
+  { value: 'thread_silk', label: 'Multicolor Silk Thread Embroidery' }
 ];

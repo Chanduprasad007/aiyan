@@ -60,7 +60,6 @@ Your response must be in clean, highly structured JSON format with the following
 - "suggestedColorPairings": An array of suggested embroidery colors that would pop beautiful against the garment fabric.
 - "careInstructions": Brief elegant advice on how to store and clean the finished garment.
 - "estimateTimeline": Estimated handcrafting duration in days (e.g., "7-10 Days", "15-18 Days for heavy bridal").
-- "estimatedBudget": A friendly pricing range estimate (e.g., "₹4,500 - ₹6,500" or "₹12,000 - ₹15,000" depending on work complexity).
 
 Be encouraging, warm, professional, and evoke the luxury of high-end Indian bridal wear. Maintain authentic Indian ethnic wear vocabulary (Zardosi, Maggam, Aari, Kundan, Jhumka motifs, etc.). Always return valid JSON. Do not write any markdown blocks outside the JSON object.`;
 

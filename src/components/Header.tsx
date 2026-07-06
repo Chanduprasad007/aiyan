@@ -13,7 +13,7 @@ export default function Header({ onNavigate }: HeaderProps) {
     { label: 'Our Craft', id: 'craft' },
     { label: 'Signature Collections', id: 'portfolio' },
     { label: 'AI Designer Consultant', id: 'ai-consultant' },
-    { label: 'Price Estimator', id: 'estimator' },
+    { label: 'Craft Estimator', id: 'estimator' },
     { label: 'Locate Store', id: 'location' }
   ];
 
@@ -29,12 +29,12 @@ export default function Header({ onNavigate }: HeaderProps) {
           
           {/* Logo Brand matching Immersive design exactly */}
           <div className="flex items-center gap-4 cursor-pointer" onClick={() => handleItemClick('hero')}>
-            <div className="w-10 h-10 border border-[#c9a050] rotate-45 flex items-center justify-center shrink-0">
-              <span className="-rotate-45 font-serif text-[#c9a050] text-xl font-bold">A</span>
+            <div className="w-14 h-14 border-2 border-[#c9a050] rotate-45 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(201,160,80,0.15)]">
+              <span className="-rotate-45 font-serif text-[#c9a050] text-2xl font-black">A</span>
             </div>
             <div>
-              <span className="font-serif text-xl tracking-widest uppercase text-white block">AIYAN</span>
-              <span className="font-mono text-[8px] tracking-[0.25em] text-[#c9a050] block -mt-1 uppercase">EMBROIDERY & HAND WORKS</span>
+              <span className="font-serif text-3xl sm:text-4xl font-extrabold tracking-[0.1em] text-white block leading-tight">AIYAN</span>
+              <span className="font-mono text-[9px] sm:text-[10px] tracking-[0.25em] text-[#c9a050] block font-bold uppercase">EMBROIDERY & HAND WORKS</span>
             </div>
           </div>
 
