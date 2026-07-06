@@ -45,7 +45,7 @@ export default function PortfolioSection({ onSelectDesign }: PortfolioProps) {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-wide">Our Signature Masterpieces</h2>
           <div className="h-0.5 w-16 bg-[#c9a050] mx-auto rounded-full" />
           <p className="font-sans text-[#a8a29e] text-sm leading-relaxed">
-            Browse custom-commissioned masterpieces handcrafted in our Sneha Colony boutique. Select any item to view intricate details or request a custom recreation.
+            Browse custom-commissioned masterpieces handcrafted in our Banashankari boutique. Select any item to view intricate details or request a custom recreation.
           </p>
         </div>
 
