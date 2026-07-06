@@ -34,7 +34,7 @@ h1, h2, h3, h4, .font-display {
   background: #0c0c0b;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c9a050/30;
+  background: rgba(201, 160, 80, 0.3);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
