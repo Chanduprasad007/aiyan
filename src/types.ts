@@ -21,6 +21,7 @@ export interface DesignProposal {
   careInstructions: string;
   estimateTimeline: string;
   estimatedBudget?: string;
+  isAiGenerated?: boolean;
 }
 
 export interface PortfolioItem {
@@ -30,6 +31,7 @@ export interface PortfolioItem {
   image: string;
   description: string;
   details: string[];
+  estimatedTime?: string;
 }
 
 export interface EstimatorOptions {

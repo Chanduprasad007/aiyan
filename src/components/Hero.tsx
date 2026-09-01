@@ -1,49 +1,50 @@
-import { ArrowRight, Sparkles, Star, ShieldCheck, Clock } from 'lucide-react';
+import { ArrowRight, Sparkles, Star, ShieldCheck, Clock, Award } from 'lucide-react';
 import { motion } from 'motion/react';
 import imageHero from '../assets/images/hero_bridal_saree_embroidery_1783349684763.jpg';
 
 interface HeroProps {
-  onNavigate: (section: string) => void;
+  onNavigate: (sectionId: string) => void;
 }
 
 export default function Hero({ onNavigate }: HeroProps) {
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center bg-[#0c0c0b] text-[#f4f1ea] overflow-hidden py-16">
+    <section id="hero" className="relative min-h-[92vh] flex items-center bg-[#09080b] text-[#f4f1ea] overflow-hidden py-16 sm:py-24">
       
-      {/* Absolute Decorative Immersive Background Elements */}
-      <div className="absolute inset-0 opacity-25 pointer-events-none z-0">
-        <div className="absolute top-[-10%] left-[-5%] w-[400px] h-[400px] rounded-full bg-[#5c1a1a] blur-[100px]" />
-        <div className="absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-[#8c6d31] blur-[120px]" />
+      {/* Subtle Luxury Ambient Glows */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        <div className="absolute top-[-10%] left-[-5%] w-[500px] h-[500px] rounded-full bg-[#6b151b]/15 blur-[140px]" />
+        <div className="absolute bottom-[-10%] right-[-5%] w-[550px] h-[550px] rounded-full bg-[#c9a050]/10 blur-[150px]" />
       </div>
       
-      {/* Thread Line Grid Art */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none z-0">
+      {/* Decorative Traditional Needlework Grid Line Art */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-0">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#c9a050" strokeWidth="0.5" />
+          <pattern id="hero-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#c9a050" strokeWidth="0.6" />
           </pattern>
-          <rect width="100%" height="100%" fill="url(#grid)" />
+          <rect width="100%" height="100%" fill="url(#hero-grid)" />
         </svg>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Text content side */}
+          {/* Text Content Column */}
           <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
             
-            {/* Elegant location and rating badge */}
+            {/* Elegant Atelier Badge */}
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-block px-4 py-1.5 border border-[#c9a050]/30 rounded-full w-max text-[10px] uppercase tracking-widest text-[#c9a050] bg-black/40 backdrop-blur-sm"
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 border border-[#c9a050]/40 rounded-full text-[11px] uppercase tracking-widest text-[#c9a050] bg-[#141318]/90 backdrop-blur-md shadow-sm"
             >
-              <span className="font-mono">Est. 2012 • Aiyan Royal Embroidery Bangalore</span>
-              <span className="mx-2 text-[#c9a050]/50">•</span>
-              <span className="font-sans font-bold text-[#f4f1ea] inline-flex items-center gap-1">
+              <Award className="h-3.5 w-3.5 text-[#c9a050]" />
+              <span className="font-mono">Est. 2012 • Banashankari, Bangalore</span>
+              <span className="text-[#c9a050]/40">•</span>
+              <span className="font-sans font-bold text-white inline-flex items-center gap-1">
                 <Star className="h-3 w-3 fill-[#c9a050] text-[#c9a050]" />
-                4.9/5
+                4.9/5 Bridal Rating
               </span>
             </motion.div>
  
@@ -53,98 +54,107 @@ export default function Hero({ onNavigate }: HeroProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="font-serif text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-wide text-white leading-[1.15]"
+                className="font-serif text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.12]"
               >
                 Threads of <br />
-                <span className="italic font-light text-[#c9a050]">Heritage & Grace</span>
+                <span className="italic font-light text-gold-gradient">
+                  Heritage & Grace
+                </span>
               </motion.h1>
 
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="font-sans text-[#a8a29e] text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light"
+                className="font-sans text-neutral-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light"
               >
-                Bespoke Aari, heavy Maggam, and classic Zardosi handwork for the modern woman. Specializing in majestic bridal silk blouses and custom designer jackets that tell a story in every single stitch.
+                Bespoke Aari, intricate Maggam, and classic Zardosi handwork crafted for your most cherished celebrations. Specializing in majestic bridal silk blouses, scalloped saree borders, and custom designer jackets in Bangalore.
               </motion.p>
             </div>
 
-            {/* Quick trust bullet points */}
+            {/* Quick Trust Highlights */}
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-[#a8a29e]"
+              className="grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-neutral-400 border-y border-white/5 py-4"
             >
-              <div className="flex items-center space-x-2">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1.5">
                 <ShieldCheck className="h-4 w-4 text-[#c9a050] shrink-0" />
-                <span>100% HANDWORK</span>
+                <span>100% Hand Loomed</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1.5">
                 <Clock className="h-4 w-4 text-[#c9a050] shrink-0" />
-                <span>TIMELY BRIDAL FITS</span>
+                <span>Guaranteed Fits</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1.5">
                 <Sparkles className="h-4 w-4 text-[#c9a050] shrink-0" />
-                <span>AI PREVIEW CONCERT</span>
+                <span>AI Design Blueprint</span>
               </div>
             </motion.div>
 
-            {/* Action buttons matching Design specifications exactly */}
+            {/* Action Buttons */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-5 pt-2"
+              className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 pt-2"
             >
               <button
                 onClick={() => onNavigate('ai-consultant')}
-                className="w-full sm:w-auto bg-[#c9a050] text-[#0c0c0b] px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-[#b08b40] transition-colors cursor-pointer flex items-center justify-center space-x-2 shadow-lg"
+                className="w-full sm:w-auto bg-[#c9a050] hover:bg-[#b08535] text-[#09080b] px-9 py-4 rounded-xl font-bold uppercase text-xs tracking-widest transition-all duration-300 flex items-center justify-center space-x-2 shadow-[0_0_25px_rgba(201,160,80,0.3)] hover:shadow-[0_0_35px_rgba(201,160,80,0.5)] cursor-pointer"
               >
-                <Sparkles className="h-4 w-4 text-[#0c0c0b] fill-current" />
-                <span>Consult AI Designer</span>
-                <ArrowRight className="h-3.5 w-3.5 text-[#0c0c0b]" />
+                <Sparkles className="h-4 w-4 fill-[#09080b]" />
+                <span>Consult AI Stylist</span>
+                <ArrowRight className="h-4 w-4" />
               </button>
 
               <button
                 onClick={() => onNavigate('portfolio')}
-                className="w-full sm:w-auto border border-white/20 text-[#f4f1ea] px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-white/5 transition-colors cursor-pointer"
+                className="w-full sm:w-auto border border-white/15 bg-white/5 hover:bg-white/10 text-white px-9 py-4 rounded-xl font-bold uppercase text-xs tracking-widest transition-all duration-300 cursor-pointer"
               >
-                <span>View Lookbook</span>
+                <span>Explore Lookbook</span>
               </button>
             </motion.div>
+
           </div>
 
-          {/* Majestic Saree Image side with premium gold borders */}
+          {/* Majestic Hero Image Showcase Column */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-5 relative"
           >
-            {/* Fine Minimal Gold Accent Border */}
-            <div className="absolute -inset-1 border border-[#c9a050]/20 rounded" />
+            {/* Fine Gold Outer Border Frame */}
+            <div className="absolute -inset-2 border border-[#c9a050]/30 rounded-2xl pointer-events-none" />
             
-            <div className="relative bg-[#1a1a18] border border-white/5 p-2 rounded shadow-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-[480px]">
+            <div className="relative bg-[#141318] border border-white/10 p-2.5 rounded-xl shadow-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/11] lg:aspect-auto lg:h-[500px]">
               <img 
                 src={imageHero} 
-                alt="Intricate Royal Silk Saree Embroidery" 
-                className="w-full h-full object-cover filter brightness-95 hover:brightness-100 transition-all duration-700"
+                alt="Intricate Royal Silk Saree Embroidery by Aiyan Embroidery Bangalore" 
+                className="w-full h-full object-cover rounded-lg filter brightness-95 hover:brightness-100 transition-all duration-700 hover:scale-105"
                 referrerPolicy="no-referrer"
               />
               
-              {/* Elegant overlay card details */}
-              <div className="absolute bottom-5 left-5 right-5 bg-[#0c0c0b]/90 backdrop-blur-md p-4 border border-white/5 shadow-xl">
-                <span className="font-mono text-[9px] tracking-[0.2em] text-[#c9a050] block mb-1">SIGNATURE CRAFT</span>
-                <h3 className="font-serif text-sm font-bold text-white tracking-wide">Pure Gold Zari Scalloped Blouse</h3>
-                <p className="font-sans text-[11px] text-[#a8a29e] mt-1">100% handcrafted over pure Bangalore raw silk. Featuring ruby gems and premium Maggam weaving.</p>
+              {/* Floating Overlay Signature Craft Card */}
+              <div className="absolute bottom-5 left-5 right-5 bg-[#09080b]/90 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-2xl">
+                <span className="font-mono text-[9px] tracking-[0.25em] text-[#c9a050] block mb-1 font-bold">
+                  SIGNATURE BRIDAL MASTERPIECE
+                </span>
+                <h3 className="font-cinzel text-sm font-bold text-white tracking-wide">
+                  Pure Gold Zari Scalloped Saree Border & Blouse
+                </h3>
+                <p className="font-sans text-xs text-neutral-300 mt-1 line-clamp-2">
+                  Handcrafted on pure Bangalore raw silk with ruby gems, authentic Zardosi metal thread, and intricate Maggam needlework.
+                </p>
               </div>
             </div>
 
-            {/* Small floating specs */}
-            <div className="absolute -top-4 -right-4 bg-[#1a1a18] border border-white/10 p-3 shadow-lg hidden sm:block rounded">
-              <p className="font-mono text-[9px] text-[#c9a050] uppercase tracking-widest">STUDIO LOCATION:</p>
-              <p className="font-serif text-xs font-semibold text-[#f4f1ea] mt-1">Banashankari, Bangalore</p>
+            {/* Floating Location Tag */}
+            <div className="absolute -top-4 -right-4 bg-[#141318] border border-[#c9a050]/30 p-3.5 shadow-xl hidden sm:block rounded-xl">
+              <p className="font-mono text-[9px] text-[#c9a050] uppercase tracking-widest font-bold">BANGALORE ATELIER</p>
+              <p className="font-cinzel text-xs font-bold text-white mt-0.5">Banashankari 3rd Stage</p>
             </div>
           </motion.div>
 
