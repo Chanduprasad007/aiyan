@@ -8,6 +8,7 @@ import ConsultantWidget from './components/ConsultantWidget';
 import StoreLocation from './components/StoreLocation';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
+import MobileBottomBar from './components/MobileBottomBar';
 
 export default function App() {
   const [consultantPreFill, setConsultantPreFill] = useState<string>('');
@@ -28,7 +29,7 @@ export default function App() {
   };
 
   return (
-    <div id="aiyan-app-root" className="min-h-screen bg-[#faf7f2] text-[#2c251e] selection:bg-[#fde68a] selection:text-[#78350f] overflow-x-hidden antialiased relative font-sans">
+    <div id="aiyan-app-root" className="min-h-screen bg-[#faf7f2] text-[#2c251e] selection:bg-[#fde68a] selection:text-[#78350f] overflow-x-hidden antialiased relative font-sans pb-16 sm:pb-0">
       
       {/* Main App Header */}
       <Header onNavigate={handleNavigate} />
@@ -49,8 +50,11 @@ export default function App() {
       {/* Footer */}
       <Footer onNavigate={handleNavigate} />
 
-      {/* Floating WhatsApp Quick Action */}
+      {/* Floating Desktop WhatsApp Action */}
       <WhatsAppFloat />
+
+      {/* Sticky Mobile Bottom Navigation & Action Bar */}
+      <MobileBottomBar onNavigate={handleNavigate} />
     </div>
   );
 }

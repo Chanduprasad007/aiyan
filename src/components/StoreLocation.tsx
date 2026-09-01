@@ -2,7 +2,7 @@ import { MapPin, Phone, Clock, Compass, ExternalLink, Star, MessageCircle } from
 import ownerImg from '../assets/images/owner.png';
 
 export default function StoreLocation() {
-  const mapUrl = "https://www.google.com/maps/search/?api=1&query=253,+4th+Main+Rd,+Kakathiya+Nagar,+Banashankari+3rd+Stage,+Banashankari,+Bengaluru,+Karnataka+560061";
+  const mapUrl = "https://maps.app.goo.gl/U6CKjBacWw5xVvbB6";
 
   const reviews = [
     {
@@ -66,9 +66,14 @@ export default function StoreLocation() {
                     <span className="font-bold text-[#1f1a15] block">
                       Shop Address:
                     </span>
-                    <span className="text-[#574d43] leading-relaxed block mt-0.5">
+                    <a 
+                      href={mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#574d43] hover:text-[#b45309] leading-relaxed block mt-0.5 transition-colors"
+                    >
                       253, 4th Main Rd, Kakathiya Nagar, Banashankari 3rd Stage, Bengaluru, Karnataka 560061
-                    </span>
+                    </a>
                     <span className="text-[11px] text-[#b45309] font-semibold block mt-0.5">
                       Landmark: Near Kakathiya Nagar Park, Banashankari 3rd Stage
                     </span>
@@ -81,9 +86,12 @@ export default function StoreLocation() {
                     <span className="font-bold text-[#1f1a15] block">
                       Phone & Orders:
                     </span>
-                    <span className="text-[#1f1a15] block font-bold text-sm mt-0.5">
+                    <a 
+                      href="tel:+919845531210"
+                      className="text-[#1f1a15] hover:text-[#b45309] block font-bold text-sm mt-0.5"
+                    >
                       +91 98455 31210 / +91 80240 91312
-                    </span>
+                    </a>
                     <span className="text-[11px] text-[#736b63] block">
                       Feel free to call or WhatsApp anytime before visiting
                     </span>
@@ -113,7 +121,7 @@ export default function StoreLocation() {
                 href={mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 bg-[#d97706] hover:bg-[#b45309] text-white font-bold text-xs py-3 rounded-xl transition-colors flex items-center justify-center space-x-1.5 shadow-sm"
+                className="flex-1 bg-[#d97706] hover:bg-[#b45309] text-white font-bold text-xs py-3 rounded-xl transition-colors flex items-center justify-center space-x-1.5 shadow-sm cursor-pointer"
               >
                 <Compass className="h-4 w-4" />
                 <span>Open in Google Maps</span>
@@ -154,10 +162,11 @@ export default function StoreLocation() {
                 href={mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 bg-[#fef3c7] hover:bg-[#fde68a] text-[#854d0e] text-xs font-bold px-5 py-2.5 rounded-xl border border-[#fde68a] transition-colors"
+                className="inline-flex items-center gap-1.5 bg-[#fef3c7] hover:bg-[#fde68a] text-[#854d0e] text-xs font-bold px-5 py-2.5 rounded-xl border border-[#fde68a] transition-colors shadow-sm"
               >
                 <Compass className="h-4 w-4" />
-                <span>Get Exact Directions</span>
+                <span>Get Exact Live Directions (Google Maps)</span>
+                <ExternalLink className="h-3.5 w-3.5 ml-0.5" />
               </a>
             </div>
 

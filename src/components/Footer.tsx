@@ -1,4 +1,4 @@
-import { Scissors, MapPin, Phone, MessageCircle, Clock, Heart } from 'lucide-react';
+import { Scissors, MapPin, Phone, MessageCircle, Clock, Heart, ExternalLink } from 'lucide-react';
 import ownerImg from '../assets/images/owner.png';
 
 interface FooterProps {
@@ -6,6 +6,8 @@ interface FooterProps {
 }
 
 export default function Footer({ onNavigate }: FooterProps) {
+  const mapUrl = "https://maps.app.goo.gl/U6CKjBacWw5xVvbB6";
+
   const handleItemClick = (id: string) => {
     if (onNavigate) {
       onNavigate(id);
@@ -48,6 +50,16 @@ export default function Footer({ onNavigate }: FooterProps) {
               >
                 <MessageCircle className="h-3.5 w-3.5 fill-current" />
                 <span>WhatsApp: +91 98455 31210</span>
+              </a>
+
+              <a
+                href={mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white border border-[#e8dfd3] hover:border-[#d97706] text-[#3d342a] px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 shadow-sm transition-colors"
+              >
+                <MapPin className="h-3.5 w-3.5 text-[#d97706]" />
+                <span>Google Maps</span>
               </a>
             </div>
           </div>
@@ -94,11 +106,20 @@ export default function Footer({ onNavigate }: FooterProps) {
             <div className="space-y-2 text-xs text-[#574d43]">
               <p className="flex items-start">
                 <MapPin className="h-4 w-4 text-[#d97706] mr-2 shrink-0 mt-0.5" />
-                <span>253, 4th Main Rd, Kakathiya Nagar, Banashankari 3rd Stage, Bengaluru, Karnataka 560061</span>
+                <a 
+                  href={mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#b45309] transition-colors"
+                >
+                  253, 4th Main Rd, Kakathiya Nagar, Banashankari 3rd Stage, Bengaluru, Karnataka 560061
+                </a>
               </p>
               <p className="flex items-center">
                 <Phone className="h-4 w-4 text-[#d97706] mr-2 shrink-0" />
-                <span>+91 98455 31210 / +91 80240 91312</span>
+                <a href="tel:+919845531210" className="hover:text-[#b45309] transition-colors">
+                  +91 98455 31210 / +91 80240 91312
+                </a>
               </p>
               <p className="flex items-center">
                 <Clock className="h-4 w-4 text-[#d97706] mr-2 shrink-0" />
